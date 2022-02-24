@@ -37,7 +37,7 @@ function getResult(array $numb, array $arith): int
             continue;
         }
 
-        echo implode(', ' , $permutation) . ' |= ' , $permResult . "\n";
+//        echo implode(', ' , $permutation) . ' |= ' , $permResult . "\n";
 
         if ($result === null || $result < $permResult) {
 //            echo implode(', ' , $permutation) . ' |= ' , $permResult . "\n";
@@ -79,7 +79,7 @@ function getUniquePermutations($inputArr, &$returnArr = [], $processedArr = [])
     if (count($inputArr) === 1) {
         $permutation = array_merge($processedArr, $inputArr);
         $permKey = implode('', $permutation);
-        if (!isset($returnArr[$permKey]) && $permutation[0] !== '//') {
+        if (!isset($returnArr[$permKey])) {
             $returnArr[$permKey] = $permutation;
         }
     } else {
